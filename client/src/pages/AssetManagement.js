@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Filter, Package, AlertTriangle, Shield, CheckCircle, Eye, Calendar, MapPin, Wrench } from 'lucide-react';
+import { Search, Filter, Package, AlertTriangle, Shield, CheckCircle } from 'lucide-react';
 import './AssetManagement.css';
 
 function AssetManagement() {

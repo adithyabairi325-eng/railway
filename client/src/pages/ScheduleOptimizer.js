@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, Users, AlertTriangle, CheckCircle, ArrowRight, Zap } from 'lucide-react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, GanttChart } from 'recharts';
+import { Clock, Users, AlertTriangle, CheckCircle, Zap } from 'lucide-react';
 import './ScheduleOptimizer.css';
 
 function ScheduleOptimizer() {

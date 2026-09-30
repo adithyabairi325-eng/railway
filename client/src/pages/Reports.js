@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TrendingUp, TrendingDown, Calendar, Wrench, Shield, BarChart3 } from 'lucide-react';
+import { TrendingUp, TrendingDown } from 'lucide-react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, AreaChart, Area, BarChart, Bar } from 'recharts';
 import './Reports.css';
 
