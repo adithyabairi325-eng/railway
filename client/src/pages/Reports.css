@@ -1,0 +1,234 @@
+.reports-page {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Stats Grid */
+.reports-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.report-stat {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.report-stat .label {
+  font-size: 14px;
+  color: var(--text-medium);
+  margin-bottom: 8px;
+}
+
+.report-stat .value {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.report-stat .trend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.report-stat .trend.up { color: var(--success); }
+.report-stat .trend.down { color: var(--danger); }
+
+/* Charts Grid */
+.reports-charts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.chart-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.chart-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chart-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.chart-filter {
+  padding: 6px 12px;
+  border: 1px solid var(--border-gray);
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Department Breakdown */
+.department-breakdown {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 32px;
+}
+
+.department-breakdown h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.department-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.department-card {
+  background: var(--light-gray);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.department-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--pale-orange);
+  color: var(--primary-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  font-size: 24px;
+}
+
+.department-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.department-count {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-orange);
+}
+
+.department-percent {
+  font-size: 12px;
+  color: var(--text-light);
+  margin-top: 4px;
+}
+
+/* Performance Metrics */
+.performance-section {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.performance-section h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.metric-card {
+  background: var(--light-gray);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.metric-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.metric-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.metric-badge.excellent { background: #D1FAE5; color: var(--success); }
+.metric-badge.good { background: #DBEAFE; color: var(--info); }
+.metric-badge.average { background: #FEF3C7; color: var(--warning); }
+
+.metric-progress {
+  height: 8px;
+  background: var(--border-gray);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.metric-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.metric-fill.excellent { background: var(--success); }
+.metric-fill.good { background: var(--info); }
+.metric-fill.average { background: var(--warning); }
+
+.metric-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+@media (max-width: 1024px) {
+  .reports-stats, .department-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reports-charts {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .reports-stats, .department-grid {
+    grid-template-columns: 1fr;
+  }
+}
